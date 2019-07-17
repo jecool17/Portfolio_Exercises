@@ -1,0 +1,498 @@
+﻿
+@{ 
+    Layout = null;
+}
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CooleyWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="~/cooleyicon.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="~/css/flexslider.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="~/css/flexslider.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeMidnight.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+
+
+
+
+</head>
+<body>
+
+
+    @*modal content*@
+
+    <div id="AllExercises" class="modal fade" role="dialog">
+        <div class="modal-dialog form-control">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-lg center-block">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center">All Exercises</h3>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#Palindrome">Palindrome</a></li>
+                        <li><a data-toggle="tab" href="#Math">Math Game</a></li>
+                        <li><a data-toggle="tab" href="#Factorial">Factorial</a></li>
+                        <li><a data-toggle="tab" href="#FizzBuzz">FizzBuzz</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="Palindrome" class="tab-pane fade in active">
+
+                            <h3>Palindrome</h3>
+                            <div class="row text-center h2">
+                                Please Enter A word
+                            </div>
+                            <div class="row text-center">
+                                <button class=" btn btn-primary" id="btnPal">Calculate</button>
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6">
+                                    Enter a word here <input type="text" id="txtword" />
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="palindromeResult"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="Math" class="tab-pane fade">
+                            <div class="row h4">
+                                <div class="col-md-2 text-left">
+                                    Please Enter 5 numbers:
+
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="num6" />
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="num7" />
+                                </div>
+
+                                <div class="col-md-2 ">
+                                    <input type="number" class="form-control" id="num8" />
+                                </div>
+                                <div class="col-md-2 ">
+                                    <input type="number" class="form-control" id="num9" />
+                                </div>
+
+                                <div class="col-md-2 ">
+                                    <input type="number" class="form-control" id="num10" />
+                                </div>
+
+                            </div>
+
+
+                            <div class="row text-center">
+                                <button class=" btn btn-primary" id="btnMath1">Calculate</button>
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6 text-left">
+                                    The least of selected numbers:
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="least1"></span>
+                                </div>
+
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6 text-left">
+                                    The greatest of selected numbers:
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="max1"></span>
+                                </div>
+
+
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6 text-left">
+                                    The mean of selected numbers:
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="mean1"></span>
+                                </div>
+
+
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6 text-left">
+                                    The sum of all selected numbers:
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="sum1"></span>
+                                </div>
+
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6 text-left">
+                                    The product of all selected numbers:
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <span id="product1"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="Factorial" class="tab-pane fade">
+                            <h3>Factorial</h3>
+                            <div class="row text-center h2">
+                                Please Enter A Number
+                            </div>
+                            <div class="row text-center">
+                                <button class=" btn btn-primary" id="btnFact2">Calculate</button>
+                            </div>
+                            <div class="row h4">
+                                <div class="col-md-6">
+                                    Enter number here <input type="number" id="Fact22" />
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    Factorial of entered number:  <span id="Fact2"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="FizzBuzz" class="tab-pane fade">
+                            <div class="container-fluid">
+                                <div class="row text-center h3">
+                                    <img src="~/images/cooleycodeFavicon.png" />
+                                </div>
+                               
+                                <div class="row text-center">
+
+                                </div>
+                                <div class="row h7">
+                                    <p>
+                                        A program that accepts two numbers between 1 and 100 from the user.
+                                        The program then iterates through all numbers from 1 to 100, printing numbers in ascending
+                                        order to the screen. For each number that is a multiple of the first number input by the user,
+                                        print "Fizz" instead of the number. For each number that is a multiple of the second number input by the user,
+                                        print "Buzz" instead of the number. For numbers that are multiples of both numbers, print "FizzBuzz" instead of the number.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5 text-left">
+                                        <div class="row text-left">
+                                            <p>Enter a number <input type="number" id="Fizz1" /></p>
+                                        </div>
+                                        <div class="row text-left">
+                                            <p>Enter a number <input type="number" id="Buzz1" /></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class=" btn btn-primary" id="btnFizzBuzz1">Calculate</button>
+                                    </div>
+                                    <div class="col-md-5 text-center">
+                                        <button class="btn btn-primary" id="btnshowCode">Show Code</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                       <span class="h9" id="FizzbuzzR1" ></span>
+                                    </div>
+                                    @*<div class="col-sm-1">
+
+                                    </div>*@
+                                    <div class="col-md-5">
+                                        <div id="showCode">
+                                            <pre class="brush: js">
+                                           $("#btnFizzBuzz1").click(function () {
+                                            var value1 = Number($("#Fizz1").val());
+                                            var value2 = Number($("#Buzz1").val());
+                                            var answer = FizzBuzzB(value1, value2);
+                                            $("#FizzbuzzR1").text(answer);
+                                            });
+
+                                            function FizzBuzzB(value1, value2) {
+                                               var output = "";
+                                             for (var loop = 1; loop <= 100; loop++) {
+
+                                                 if (loop % value1 == 0 && loop % value2 == 0)
+                                                      output += "FizzBuzz ,";
+                                                  else if (loop % value1 == 0)
+                                                         output += "Fizz ,";
+                                                  else if (loop % value2 == 0)
+                                                          output += "Buzz ,";
+                                                  else (output += loop + " ,");
+                                                     }
+                                                        return output;
+
+                                                    }
+                                      </pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>  
+                            
+                            
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer modal-lg">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav id="colorlib-main-nav" role="navigation">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+        <div class="js-fullheight colorlib-table">
+            <div class="colorlib-table-cell js-fullheight">
+                <ul>
+                    <li><a href="Index">Home</a></li>
+                    <li><a href="Contact">Work</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Case Studies</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="colorlib-page">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="colorlib-navbar-brand">
+                            <a class="colorlib-logo" href="index">
+                                <div class="row">
+
+                                    <pre> <img src="~/cooleyicon.png" />OOLEYCODE</pre>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside id="colorlib-hero">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li style="background-image: url('../../images/cover_img_4.jpg');">
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                                    <div class="slider-text-inner">
+                                        <h2>Done Projects</h2>
+                                        <h1>Our Works</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div id="colorlib-work">
+            <div class="container">
+                <div class="row row-padded-bottom">
+                    <div class="col-md-7 animate-box">
+                        <img class="img-responsive" src="~/images/work-1.jpg" alt="work">
+                    </div>
+                    <div class="col-md-4 col-md-push-1 animate-box">
+                        <div class="work-detail ">
+                            <p class="tag"><span>Bootstrap</span>, <span>Javascript</span></p>
+                            <h2>Exercise 1</h2>
+                            
+                            
+                                @*<p>1. A program that accepts a series of at least 5 numbers from the user and performs various actions:</p>
+                                <p>2. A program that calculates the factorial of a number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. (i.e. 5! = 5 x 4 x 3 x 2 x 1 = 120).</p>
+                                <p>3. A program that accepts two numbers between 1 and 100 from the user. The program then iterates through all numbers from 1 to 100, printing numbers in ascending order to the screen. For each number that is a multiple of the first number input by the user, print "Fizz" instead of the number. For each number that is a multiple of the second number input by the user, print "Buzz" instead of the number. For numbers that are multiples of both numbers, print "FizzBuzz" instead of the number.</p>
+                                <p>4. A program that determines whether a word is a Palindrome (the same backward as it is forward – “radar” for example). Display the result to the user.</p>*@
+                            
+                            <p>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#AllExercises">
+                                    View Excercise
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @*
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Related Works</h2>
+                        </div>
+                        <div class="col-md-6 animate-box text-center">
+                            <a href="work-single.html" class="work-img" style="background-image: url(images/work-1.jpg);">
+                                <div class="overlay"></div>
+                                <div class="desc">
+                                    <span class="icon"><i class="icon-heart-outline"></i></span>
+                                    <p class="tag"><span>Illustration</span>, <span>Logo</span></p>
+                                    <h3>Work 01</h3>
+                                    <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 animate-box text-center">
+                            <a href="work-single.html" class="work-img" style="background-image: url(images/work-2.jpg);">
+                                <div class="overlay"></div>
+                                <div class="desc">
+                                    <span class="icon"><i class="icon-heart-outline"></i></span>
+                                    <p class="tag"><span>Web Design</span>, <span>UI</span></p>
+                                    <h3>Work 02</h3>
+                                    <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                *@
+            </div>
+
+
+
+        </div>
+
+        <div id="colorlib-hire" class="colorlib-light-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box">
+                        <h2 class="heading">Are you looking for a web designer?</h2>
+                        <p><a href="#" class="btn btn-primary btn-lg">Available for Hire!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-pb-sm">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h2>Suitcase</h2>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>From the countries Vokalia and Consonantia</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Far far away, behind the word mountains</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-pb-sm">
+                            <h2>Newsletter</h2>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia</p>
+                            <div class="subscribe text-center">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" placeholder="Enter Email address">
+                                    <input type="submit" value="Subscribe" class="btn btn-primary btn-custom">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-pb-sm right-display">
+                            <h2>Follow Us</h2>
+                            <p class="colorlib-social-icons colorlib-social-icons2">
+                                <a href="#"><i class="icon-facebook4"></i></a>
+                                <a href="#"><i class="icon-twitter3"></i></a>
+                                <a href="#"><i class="icon-googleplus"></i></a>
+                                <a href="#"><i class="icon-dribbble2"></i></a>
+                            </p>
+                            <p>
+                                <span class="block">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br>
+                                </span>
+                                <span class="block">Demo Images: <a href="http://nothingtochance.co/" target="_blank">nothingtochance.co</a> <a href="http://unsplash.co/" target="_blank">Unsplash</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="~/js/jquery.flexslider-min.js"></script>
+    <!-- Counters -->
+    <script src="~/js/jquery.countTo.js"></script>
+    <!-- Owl Carousel -->
+    <script src="~/js/owl.carousel.min.js"></script>
+
+    <!-- Main JS (Do not remove) -->
+    <script src="~/js/main.js"></script>
+
+    <script src="~/js/Exercises.js"></script>
+
+
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+
+</body>
+</html>
+
