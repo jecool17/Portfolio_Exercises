@@ -153,6 +153,7 @@
     <Content Include="images\blog-4.jpg" />
     <Content Include="images\blog-5.jpg" />
     <Content Include="images\cooleycodeFavicon.png" />
+    <Content Include="images\cooleyimage.jpeg" />
     <Content Include="images\cover_img_1.jpg" />
     <Content Include="images\cover_img_2.jpg" />
     <Content Include="images\cover_img_3.jpg" />
@@ -166,6 +167,7 @@
     <Content Include="images\person1.jpg" />
     <Content Include="images\person2.jpg" />
     <Content Include="images\person3.jpg" />
+    <Content Include="images\Software-and-Application-Security.jpg" />
     <Content Include="images\work-1.jpg" />
     <Content Include="images\work-2.jpg" />
     <Content Include="images\work-3.jpg" />
